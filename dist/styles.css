@@ -63,3 +63,71 @@ body{background:var(--bg);color:var(--text)}
 .portfolio-item.portfolio-wide{height:clamp(440px,44vw,590px);aspect-ratio:auto}
 @media(max-width:980px){.image-frame{height:clamp(380px,62vw,520px);aspect-ratio:auto}.portfolio-item.portfolio-wide{height:clamp(400px,62vw,540px);aspect-ratio:auto}}
 @media(max-width:680px){.image-frame{height:clamp(320px,88vw,430px);aspect-ratio:auto}.portfolio-item,.portfolio-item.portfolio-wide{height:calc(100vw - 32px);aspect-ratio:auto}.portfolio-item.portfolio-wide{height:calc((100vw - 32px)*.75)}.store-gallery figure,.store-gallery .store-photo{height:390px;aspect-ratio:auto}.store-gallery .store-photo{height:300px}}
+
+/* Silkmania brand system: colors and typography only */
+:root{--bg:#f7f8fc;--panel:#fff;--panel-2:#eef1fa;--text:#2d2e34;--muted:#686c78;--line:rgba(45,46,52,.13);--blue:#4374f5;--pink:#f51d83;--orange:#ff9d43;--yellow:#ffc857;--font-display:'Poppins',sans-serif;--font-body:'Inter',sans-serif}
+body{background:var(--bg);color:var(--text)}
+.site-header.scrolled{background:rgba(247,248,252,.88);border-color:rgba(45,46,52,.08)}
+.nav{background:rgba(255,255,255,.9);border-color:rgba(45,46,52,.1);box-shadow:0 14px 50px rgba(50,56,75,.09)}
+.brand-sub,.nav-links a{color:#686c78}.nav-links a:hover,.nav-links a:focus-visible{color:var(--text)}
+.eyebrow{background:rgba(255,255,255,.72);border-color:rgba(45,46,52,.12);color:#565a66}
+.button-shine{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(105deg,var(--blue),var(--pink),var(--orange),var(--yellow)) border-box;color:var(--text);box-shadow:0 14px 35px rgba(67,116,245,.12)}
+.image-frame{background:#edf0f8;box-shadow:0 35px 80px rgba(50,56,75,.16)}
+.visual-tag{background:rgba(255,255,255,.92);border-color:rgba(45,46,52,.12);box-shadow:0 18px 42px rgba(50,56,75,.14)}
+.segments{background:rgba(255,255,255,.58);border-color:rgba(45,46,52,.1)}
+.bento .service{background:linear-gradient(145deg,#fff,#f1f3fa);border-color:rgba(45,46,52,.1);box-shadow:0 12px 35px rgba(50,56,75,.05)}
+.service-featured{background:radial-gradient(circle at 85% 20%,rgba(67,116,245,.12),transparent 36%),linear-gradient(135deg,#fff,#edf0f9)}
+.dark-section{background:#eef1f9;border-color:rgba(45,46,52,.1)}
+.tech{background:linear-gradient(150deg,rgba(255,255,255,.92),rgba(255,255,255,.42));border-color:rgba(45,46,52,.11)}
+.tech-mark{background:rgba(255,255,255,.82);border-color:rgba(45,46,52,.11);color:var(--text)}
+.stats{background:#fff;border-color:rgba(45,46,52,.12)}
+.schools-section,.store-section{background:#fff;border-color:rgba(45,46,52,.1)}
+.portfolio-item{background:#e7eaf3;box-shadow:0 16px 44px rgba(50,56,75,.1)}
+.portfolio-item>div,.store-gallery figcaption{background:rgba(255,255,255,.92)}
+.button-outline{background:#fff;color:var(--text);border-color:rgba(45,46,52,.18)}
+.process-section{background:#e9ecf5;color:var(--text)}
+.about-card{background:#fff}.about-quote{background:linear-gradient(145deg,#eef1fa,#fff)}
+.cta-section{background:linear-gradient(110deg,var(--blue),var(--pink) 54%,var(--orange));color:#fff}
+footer{background:#edf0f7;border-color:rgba(45,46,52,.12)}
+.whatsapp-float{background:var(--text);color:#fff}.whatsapp-float b{background:#fff;color:var(--text)}
+.hero-location,.map-float{background:rgba(255,255,255,.9);color:var(--text)}
+@media(max-width:980px){.nav-links{background:#fff;border-color:rgba(45,46,52,.12);box-shadow:0 20px 60px rgba(50,56,75,.16)}}
+
+/* More vivid use of the Silkmania palette */
+body{background:radial-gradient(circle at 4% 7%,rgba(67,116,245,.11),transparent 20%),radial-gradient(circle at 96% 16%,rgba(245,29,131,.09),transparent 22%),var(--bg)}
+.brand-name::after{background:linear-gradient(135deg,var(--blue) 10%,var(--pink) 52%,var(--yellow))}
+.kicker,.service-chip{background:linear-gradient(90deg,var(--blue),var(--pink),var(--orange));background-clip:text;-webkit-background-clip:text;color:transparent}
+.eyebrow i{background:var(--pink);box-shadow:0 0 16px rgba(245,29,131,.7)}
+.button-primary{background:linear-gradient(110deg,var(--blue),var(--pink));color:#fff}
+.button-shine{background:linear-gradient(110deg,var(--blue),var(--pink) 58%,var(--orange)) padding-box,linear-gradient(105deg,var(--blue),var(--pink),var(--orange),var(--yellow)) border-box;color:#fff;box-shadow:0 14px 35px rgba(245,29,131,.22)}
+.hero-location{background:linear-gradient(105deg,rgba(67,116,245,.12),rgba(245,29,131,.08),rgba(255,200,87,.2));border-color:rgba(67,116,245,.22)}
+.schools-section{background:linear-gradient(120deg,#fff7d7 0%,#fff 43%,#ffeaf4 100%)}
+.school-list span:nth-child(4n+1){background:rgba(67,116,245,.09)}.school-list span:nth-child(4n+2){background:rgba(245,29,131,.08)}.school-list span:nth-child(4n+3){background:rgba(255,200,87,.23)}.school-list span:nth-child(4n){background:rgba(67,116,245,.06)}
+.segments{background:linear-gradient(90deg,rgba(67,116,245,.16),rgba(245,29,131,.13),rgba(255,200,87,.25))}
+.bento .service:nth-child(3n+1){background:linear-gradient(145deg,#fff,#e8efff);border-color:rgba(67,116,245,.25)}.bento .service:nth-child(3n+2){background:linear-gradient(145deg,#fff,#ffe7f2);border-color:rgba(245,29,131,.22)}.bento .service:nth-child(3n){background:linear-gradient(145deg,#fff,#fff2c9);border-color:rgba(255,179,58,.3)}
+.service-featured{background:radial-gradient(circle at 86% 18%,rgba(255,200,87,.45),transparent 32%),linear-gradient(135deg,#e8efff,#ffe8f3)}
+.dark-section{background:linear-gradient(120deg,#e7efff,#fff0f7 52%,#fff5cf)}
+.tech:nth-child(1){background:linear-gradient(145deg,#fff,#e4edff);border-color:rgba(67,116,245,.26)}.tech:nth-child(2){background:linear-gradient(145deg,#fff,#ffe5f1);border-color:rgba(245,29,131,.24)}.tech:nth-child(3){background:linear-gradient(145deg,#fff,#fff1c4);border-color:rgba(255,179,58,.32)}
+.tech:nth-child(1) .tech-mark{background:var(--blue);color:#fff}.tech:nth-child(2) .tech-mark{background:var(--pink);color:#fff}.tech:nth-child(3) .tech-mark{background:var(--yellow);color:var(--text)}
+.stat-main{background:linear-gradient(125deg,var(--blue),var(--pink));color:#fff}.stat-main span{color:rgba(255,255,255,.84)}
+.process-section{background:linear-gradient(115deg,#fff4c9,#fff 48%,#e7efff)}
+.about-card{background:linear-gradient(145deg,#fff,#e8efff)}.about-quote{background:linear-gradient(145deg,#ffe9f3,#fff4c8)}
+.store-section{background:linear-gradient(125deg,#fff,#eef3ff 55%,#fff1c7)}
+.portfolio-item:nth-child(3n+1)>div{background:rgba(231,239,255,.94)}.portfolio-item:nth-child(3n+2)>div{background:rgba(255,230,242,.94)}.portfolio-item:nth-child(3n)>div{background:rgba(255,243,201,.94)}
+.contact{background:linear-gradient(90deg,transparent,rgba(67,116,245,.05),rgba(245,29,131,.05),transparent)}
+footer{background:linear-gradient(110deg,#e7efff,#ffe8f3 58%,#fff2c8)}
+.map-float{background:var(--yellow);color:var(--text);border-color:rgba(255,157,67,.42)}
+.whatsapp-float{background:linear-gradient(110deg,var(--blue),var(--pink));color:#fff}
+
+/* Vivid palette for the solutions cards */
+.bento .service:nth-child(1){background:linear-gradient(135deg,#376cf2 0%,#7658e8 58%,#e9339d 100%);border-color:#376cf2;color:#fff;box-shadow:0 18px 42px rgba(67,116,245,.24)}
+.bento .service:nth-child(2){background:linear-gradient(135deg,#f51d83 0%,#ff557b 52%,#ff9d43 100%);border-color:#f51d83;color:#fff;box-shadow:0 18px 42px rgba(245,29,131,.2)}
+.bento .service:nth-child(3){background:linear-gradient(135deg,#ffd65a 0%,#ffc247 58%,#ff9d43 100%);border-color:#ffbd3d;color:#2d2e34;box-shadow:0 18px 42px rgba(255,179,58,.22)}
+.bento .service:nth-child(4){background:linear-gradient(135deg,#316cf4 0%,#4a91ff 100%);border-color:#316cf4;color:#fff;box-shadow:0 18px 42px rgba(49,108,244,.2)}
+.bento .service:nth-child(5){background:linear-gradient(135deg,#dc248f 0%,#f51d83 58%,#ff5d78 100%);border-color:#dc248f;color:#fff;box-shadow:0 18px 42px rgba(245,29,131,.2)}
+.bento .service:nth-child(6){background:linear-gradient(135deg,#ffe06b 0%,#ffc44f 52%,#ff9d43 100%);border-color:#ffc247;color:#2d2e34;box-shadow:0 18px 42px rgba(255,179,58,.22)}
+.bento .service:nth-child(1) p,.bento .service:nth-child(2) p,.bento .service:nth-child(4) p,.bento .service:nth-child(5) p{color:rgba(255,255,255,.86)}
+.bento .service:nth-child(3) p,.bento .service:nth-child(6) p{color:rgba(45,46,52,.76)}
+.bento .service:nth-child(1) .service-number,.bento .service:nth-child(2) .service-number,.bento .service:nth-child(4) .service-number,.bento .service:nth-child(5) .service-number{color:rgba(255,255,255,.72)}
+.bento .service:nth-child(3) .service-number,.bento .service:nth-child(6) .service-number{color:rgba(45,46,52,.6)}
+.bento .service .service-chip{background:none;color:#fff}.bento .service .service-arrow{color:rgba(255,255,255,.82)}
