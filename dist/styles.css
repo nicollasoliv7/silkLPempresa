@@ -131,3 +131,7 @@ footer{background:linear-gradient(110deg,#e7efff,#ffe8f3 58%,#fff2c8)}
 .bento .service:nth-child(1) .service-number,.bento .service:nth-child(2) .service-number,.bento .service:nth-child(4) .service-number,.bento .service:nth-child(5) .service-number{color:rgba(255,255,255,.72)}
 .bento .service:nth-child(3) .service-number,.bento .service:nth-child(6) .service-number{color:rgba(45,46,52,.6)}
 .bento .service .service-chip{background:none;color:#fff}.bento .service .service-arrow{color:rgba(255,255,255,.82)}
+
+/* Stable image rendering across browsers */
+.image-frame img,.portfolio-item img,.store-gallery img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;display:block}
+.portfolio-item:not(.portfolio-wide) img{object-fit:contain}
