@@ -170,3 +170,6 @@ footer{background:linear-gradient(110deg,#e7efff,#ffe8f3 58%,#fff2c8)}
 .title-highlight{display:inline;background:linear-gradient(100deg,var(--blue) 0%,var(--pink) 52%,var(--orange) 82%,var(--yellow) 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .service .title-highlight{background:linear-gradient(100deg,#fff 5%,#fff2bd 58%,#ffd16a 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
 .title-highlight-light{background:linear-gradient(100deg,#fff 0%,#fff1bd 55%,#ffe278 100%);background-clip:text;-webkit-background-clip:text}
+
+/* Real storefront photo: fill the featured card without empty bands. */
+.store-gallery .store-main img{object-fit:cover;object-position:center 46%}
