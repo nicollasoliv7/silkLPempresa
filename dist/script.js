@@ -71,7 +71,12 @@ const revealAll = (selector, options = {}) => {
 
 // Hero: entrada lateral com ritmo progressivo.
 const heroCopy = document.querySelector('.hero-copy');
+heroCopy?.classList.remove('reveal');
 heroCopy?.classList.add('visible');
+if (heroCopy) {
+  heroCopy.style.opacity = '1';
+  heroCopy.style.transform = 'none';
+}
 [
   ['.eyebrow', 0], ['h1', 150], ['.hero-text', 300], ['.hero-actions', 450],
 ].forEach(([selector, delay]) => reveal(heroCopy?.querySelector(selector), { direction: 'left', delay }));
@@ -83,7 +88,13 @@ reveal(document.querySelector('.hero-visual'), { direction: 'right', delay: 300,
 revealAll('.section-head', { direction: 'up' });
 revealAll('.service', { direction: 'up', stagger: 150 });
 revealAll('.tech', { direction: 'up', stagger: 150 });
-document.querySelector('.portfolio-editorial')?.classList.add('visible');
+const portfolioGrid = document.querySelector('.portfolio-editorial');
+portfolioGrid?.classList.remove('reveal');
+portfolioGrid?.classList.add('visible');
+if (portfolioGrid) {
+  portfolioGrid.style.opacity = '1';
+  portfolioGrid.style.transform = 'none';
+}
 revealAll('.portfolio-item', { direction: 'up', stagger: 120 });
 revealAll('.process li', { direction: 'left', stagger: 150 });
 reveal(document.querySelector('.about-card'), { direction: 'left' });
