@@ -155,3 +155,13 @@ footer{background:linear-gradient(110deg,#e7efff,#ffe8f3 58%,#fff2c8)}
 .topic-store{--topic-bg:linear-gradient(145deg,#dff0ff,#e2e7ff);--topic-line:rgba(67,116,245,.28);--topic-shadow:rgba(67,116,245,.18);--topic-accent:#4374f5}
 .topic-health{--topic-bg:linear-gradient(145deg,#e6f8ee,#e5f0ff);--topic-line:rgba(38,153,98,.25);--topic-shadow:rgba(38,153,98,.15);--topic-accent:#269962}
 @media(max-width:680px){.portfolio-topic>.topic-icon{width:104px;height:104px;border-radius:26px;font-size:46px}}
+
+/* Custom directional icons: consistent line style, without emoji rendering. */
+.icon-arrow{position:relative;display:inline-block;width:15px;height:15px;flex:0 0 15px;color:currentColor;vertical-align:-2px}
+.icon-arrow::before{content:'';position:absolute;left:1px;top:7px;width:13px;height:2px;border-radius:2px;background:currentColor;transform:rotate(-45deg);transform-origin:center}
+.icon-arrow::after{content:'';position:absolute;right:0;top:0;width:7px;height:7px;border-top:2px solid currentColor;border-right:2px solid currentColor;border-radius:1px}
+.icon-arrow-down{transform:rotate(135deg)}
+.icon-arrow-up{transform:rotate(-45deg)}
+.hero-location strong,.footer-top>a{display:inline-flex;align-items:center;gap:8px}
+.service-arrow.icon-arrow{width:17px;height:17px}
+.whatsapp-float b svg{display:block;width:20px;height:20px;color:currentColor}
