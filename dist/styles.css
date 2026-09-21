@@ -136,3 +136,4 @@ footer{background:linear-gradient(110deg,#e7efff,#ffe8f3 58%,#fff2c8)}
 .image-frame img,.portfolio-item img,.store-gallery img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;display:block}
 .portfolio-item:not(.portfolio-wide) img{object-fit:contain}
 .image-frame img{object-fit:cover;object-position:center}
+.portfolio-item.portfolio-wide img{object-fit:cover;object-position:center}
