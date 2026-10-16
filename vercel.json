@@ -9,7 +9,7 @@
       ]
     },
     {
-      "source": "/(styles.css|script.js|precos-escolares.js|orcamento-escolar.js)",
+      "source": "/(styles.css|script.js|scroll-reveal.js|precos-escolares.js|orcamento-escolar.js)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=604800" }
       ]

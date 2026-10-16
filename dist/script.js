@@ -36,29 +36,4 @@
   /* ---------- Ano no rodapé ---------- */
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
-
-  /* ---------- Animação de entrada ---------- */
-  const items = document.querySelectorAll('.reveal');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (reduceMotion || !('IntersectionObserver' in window)) {
-    items.forEach((el) => el.classList.add('visible'));
-    return;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  /* Pequeno escalonamento entre irmãos do mesmo grupo (cards, fotos, etapas). */
-  items.forEach((el) => {
-    const siblings = el.parentElement ? [...el.parentElement.children].filter((c) => c.classList.contains('reveal')) : [];
-    const index = siblings.indexOf(el);
-    if (index > 0) el.style.transitionDelay = `${Math.min(index, 5) * 90}ms`;
-    observer.observe(el);
-  });
 })();

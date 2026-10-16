@@ -94,7 +94,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; letter-spacing: -.04em
 .text-link .icon-arrow { color: var(--blue); }
 
 /* ---------- Cabeçalho ---------- */
-.site-header { position: fixed; inset: 0 0 auto; z-index: 100; padding: 18px 0; transition: padding .3s, background .3s; }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 1001; padding: 18px 0; transition: padding .3s, background .3s; }
 .site-header.scrolled { padding: 10px 0; }
 .nav {
   height: 64px; display: flex; align-items: center; gap: 28px;
@@ -300,11 +300,11 @@ h1 { font-size: clamp(50px, 7vw, 92px); margin: 28px 0 26px; max-width: 760px; }
 .footer-top p { margin: 0; color: var(--muted); }
 .footer-top > a { justify-self: end; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; border-bottom: 1px solid var(--line); }
 .footer-word { margin: 64px -20px 16px; font-family: var(--font-display); font-size: clamp(80px, 17vw, 250px); font-weight: 800; line-height: .9; letter-spacing: -.08em; text-align: center; white-space: nowrap; color: transparent; -webkit-text-stroke: 1px rgba(45, 46, 52, .16); }
-.footer-bottom { min-height: 75px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(45, 46, 52, .12); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.footer-bottom { min-height: 75px; padding-bottom: 190px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(45, 46, 52, .12); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 
 /* WhatsApp flutuante */
 .whatsapp-float {
-  position: fixed; z-index: 90; right: 24px; bottom: 24px;
+  position: fixed; z-index: 1000; right: 24px; bottom: 24px;
   display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 10px 10px 10px 19px;
   border-radius: 100px; background: var(--grad); color: #fff; font-size: 13px; font-weight: 700;
   box-shadow: 0 16px 40px rgba(245, 29, 131, .3); transition: transform .2s;
@@ -358,11 +358,24 @@ h1 { font-size: clamp(50px, 7vw, 92px); margin: 28px 0 26px; max-width: 760px; }
 .oe-aviso { margin: 0 0 14px; padding: 12px 16px; border-radius: 12px; background: rgba(245, 29, 131, .08); border: 1px solid rgba(245, 29, 131, .25); font-size: 13.5px; font-weight: 600; color: var(--pink-ink); }
 .oe-nota { margin: 14px 0 0; text-align: center; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
 
-/* ---------- Animação de entrada ---------- */
-.js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-.js .reveal.visible { opacity: 1; transform: none; }
+/* ---------- ScrollReveal ----------
+   A animação em si é feita com estilos inline por scroll-reveal.js.
+   Esta regra só evita que o conteúdo pisque visível antes do script assumir. */
+.js:not(.reveal-ready) [data-reveal] { opacity: 0; }
 
 /* ---------- Responsivo ---------- */
+/* Notebooks (telas largas e baixas): hero mais compacto, para o botão
+   principal caber na primeira tela sem precisar rolar. */
+@media (min-width: 981px) and (max-height: 900px) {
+  .hero { min-height: 0; padding-top: 118px; padding-bottom: 64px; }
+  h1 { font-size: clamp(48px, 5.4vw, 76px); margin: 22px 0 20px; }
+  .hero-text { font-size: 18px; }
+  .hero-actions { margin-top: 28px; }
+  .hero-location { margin-top: 20px; }
+  .trust { margin-top: 24px; }
+  .image-frame { max-height: calc(100vh - 170px); }
+}
+
 @media (max-width: 1100px) {
   .nav { gap: 18px; }
   .nav-links { gap: 16px; }
@@ -488,9 +501,9 @@ h1 { font-size: clamp(50px, 7vw, 92px); margin: 28px 0 26px; max-width: 760px; }
 
   .footer-top { grid-template-columns: 1fr; gap: 30px; }
   .footer-top > a { justify-self: start; }
-  .footer-word { margin-top: 50px; font-size: clamp(66px, 23vw, 110px); }
-  .footer-bottom { display: block; padding: 22px 0 100px; line-height: 2; }
-  .footer-bottom span { display: block; }
+  .footer-word { margin: 50px 0 16px; font-size: clamp(54px, 18.5vw, 110px); letter-spacing: -.06em; }
+  .footer-bottom { display: block; padding: 22px 0 190px; line-height: 2; }
+  .footer-bottom > span { display: block; }
 
   .whatsapp-float { right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); padding: 8px; }
   .whatsapp-float span { display: none; }
@@ -499,5 +512,5 @@ h1 { font-size: clamp(50px, 7vw, 92px); margin: 28px 0 26px; max-width: 760px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-  .js .reveal { opacity: 1; transform: none; }
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; }
 }
