@@ -13,7 +13,12 @@ Site estático, sem build. Tudo o que vai ao ar está em `dist/`.
 - `dist/script.js` — menu mobile, cabeçalho e animações
 - `dist/precos-escolares.js` — **tabela de preços 2026**: para reajustar, altere só os números aqui
 - `dist/orcamento-escolar.js` — calculadora de uniforme escolar que envia o pedido pelo WhatsApp
-- `dist/assets/` — imagens (todas verificadas, sem arquivos corrompidos)
+- `dist/scroll-reveal.js` — animações de entrada por scroll (configuradas por `data-reveal` no HTML)
+- `dist/assets/` — imagens e fontes
+  - Cada foto existe em 2–3 larguras, em AVIF (mais leve) e WebP (reserva para navegadores antigos):
+    `nome-600.avif`, `nome-600.webp`… O navegador escolhe sozinho o tamanho certo para a tela.
+  - Para trocar uma foto, gere as mesmas larguras nos dois formatos e mantenha os nomes.
+  - `assets/fonts/` — Inter e Poppins hospedadas no próprio site (licença OFL), sem Google Fonts.
 
 ## O que mudou em relação à versão anterior
 - HTML corrigido (tag quebrada no hero, link do Maps inválido, erro de digitação "encontte").

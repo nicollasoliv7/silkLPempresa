@@ -60,10 +60,12 @@
     el.style.transition = `opacity ${o.duration}ms ${EASE} ${o.delay}ms, transform ${o.duration}ms ${EASE} ${o.delay}ms`;
     el.style.opacity = '0';
     el.style.transform = offset(o.direction, o.distance);
-    el.style.willChange = 'opacity, transform';
   };
 
   const show = (el, o) => {
+    /* will-change só durante a animação: reservar camada de GPU para dezenas
+     * de elementos ao mesmo tempo pesa na memória do celular. */
+    el.style.willChange = 'opacity, transform';
     el.style.opacity = '1';
     el.style.transform = 'translate3d(0, 0, 0)';
     if (!o.once) return;
